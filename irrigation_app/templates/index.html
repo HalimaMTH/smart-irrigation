@@ -1,0 +1,11 @@
+<!-- Formulaire pour entrer les données -->
+
+<form method="POST">
+    {% csrf_token %}
+
+    <input type="text" name="temperature" placeholder="Température">
+    <input type="text" name="humidity" placeholder="Humidité">
+    <input type="text" name="soil" placeholder="Humidité du sol">
+
+    <button type="submit">Prédire</button>
+</form>
