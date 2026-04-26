@@ -1,4 +1,4 @@
-Soil_Type,Soil_pH,Soil_Moisture,Organic_Carbon,Electrical_Conductivity,Temperature_C,Humidity,Rainfall_mm,Sunlight_Hours,Wind_Speed_kmh,Crop_Type,Crop_Growth_Stage,Season,Irrigation_Type,Water_Source,Field_Area_hectare,Mulching_Used,Previous_Irrigation_mm,Region,Irrigation_Need
+type_sol,ph_sol,humidite_sol,carbone_organique,conductivite_electrique,temperature,humidite,precipitation,heures_ensoleillement,vitesse_vent,type_culture,stade_croissance,saison,type_irrigation,source_eau,surface_champ,paillage,irrigation_precedente,region,besoin_irrigation
 Clay,6.14,36.48,0.42,2.17,21.9,31.19,1167.7,4.01,1.97,Wheat,Vegetative,Rabi,Rainfed,Reservoir,4.73,Yes,1.98,South,Low
 Silt,6.41,50.56,0.38,0.23,36.5,26.01,831.28,10.72,16.82,Maize,Flowering,Zaid,Canal,Groundwater,12.22,Yes,33.56,Central,Medium
 Sandy,7.71,40.07,1.09,2.18,41.83,76.41,1844.45,7.75,19.03,Cotton,Harvest,Rabi,Drip,Reservoir,5.52,Yes,34.62,South,Low
