@@ -1,0 +1,2 @@
+Best model: Random Forest
+Best F1 macro: 0.9354814398799931

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Smart Irrigation</title>
+</head>
+<body>
+    <h1>Smart Irrigation Prediction</h1>
+
+    <form method="POST">
+        {% csrf_token %}
+        <h3>Numerical Data</h3>
+
+        <label>Soil pH</label>
+        <input type="number" step="0.01" name="Soil_pH" value="6.5" required><br>
+
+        <label>Soil Moisture</label>
+        <input type="number" step="0.01" name="Soil_Moisture" value="35" required><br>
+
+        <label>Organic Carbon</label>
+        <input type="number" step="0.01" name="Organic_Carbon" value="0.9" required><br>
+
+        <label>Electrical Conductivity</label>
+        <input type="number" step="0.01" name="Electrical_Conductivity" value="1.5" required><br>
+
+        <label>Temperature</label>
+        <input type="number" step="0.01" name="Temperature_C" value="27" required><br>
+
+        <label>Humidity</label>
+        <input type="number" step="0.01" name="Humidity" value="60" required><br>
+
+        <label>Rainfall</label>
+        <input type="number" step="0.01" name="Rainfall_mm" value="1000" required><br>
+
+        <label>Sunlight Hours</label>
+        <input type="number" step="0.01" name="Sunlight_Hours" value="7" required><br>
+
+        <label>Wind Speed</label>
+        <input type="number" step="0.01" name="Wind_Speed_kmh" value="10" required><br>
+
+        <label>Field Area</label>
+        <input type="number" step="0.01" name="Field_Area_hectare" value="5" required><br>
+
+        <label>Previous Irrigation</label>
+        <input type="number" step="0.01" name="Previous_Irrigation_mm" value="40" required><br>
+
+        <h3>Categorical Data</h3>
+
+        <label>Soil Type</label>
+        <select name="Soil_Type">
+            <option>Clay</option>
+            <option>Silt</option>
+            <option>Sandy</option>
+            <option>Loamy</option>
+        </select><br>
+
+        <label>Crop Type</label>
+        <select name="Crop_Type">
+            <option>Wheat</option>
+            <option>Maize</option>
+            <option>Cotton</option>
+            <option>Rice</option>
+            <option>Potato</option>
+            <option>Sugarcane</option>
+        </select><br>
+
+        <label>Growth Stage</label>
+        <select name="Crop_Growth_Stage">
+            <option>Vegetative</option>
+            <option>Flowering</option>
+            <option>Harvest</option>
+            <option>Sowing</option>
+        </select><br>
+
+        <label>Season</label>
+        <select name="Season">
+            <option>Rabi</option>
+            <option>Zaid</option>
+            <option>Kharif</option>
+        </select><br>
+
+        <label>Irrigation Type</label>
+        <select name="Irrigation_Type">
+            <option>Rainfed</option>
+            <option>Canal</option>
+            <option>Drip</option>
+            <option>Sprinkler</option>
+        </select><br>
+
+        <label>Water Source</label>
+        <select name="Water_Source">
+            <option>Reservoir</option>
+            <option>Groundwater</option>
+            <option>River</option>
+            <option>Rainwater</option>
+        </select><br>
+
+        <label>Mulching Used</label>
+        <select name="Mulching_Used">
+            <option>Yes</option>
+            <option>No</option>
+        </select><br>
+
+        <label>Region</label>
+        <select name="Region">
+            <option>South</option>
+            <option>Central</option>
+            <option>North</option>
+            <option>East</option>
+            <option>West</option>
+        </select><br><br>
+
+        <button type="submit">Predict</button>
+    </form>
+
+    {% if prediction %}
+        <h2>Prediction: {{ prediction }}</h2>
+    {% endif %}
+</body>
+</html>
